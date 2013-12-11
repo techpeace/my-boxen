@@ -1,8 +1,6 @@
 # Let's get you developing!
 
-Getting a new development environment up and running can be a laborious process. Fortunately for you, we've eliminated all of the pain that we possibly can. :)
-
-Unfortunately, the below instructions only apply to folks running OS X. If you aren't on a Mac, never fear! One of our intrepid instructors can still help you get set up.
+Getting a new development environment up and running can be a laborious process. Fortunately for you, I've eliminated all of the pain that I possibly can. :)
 
 ![Testimonial](https://f.cloud.github.com/assets/2220/1468788/82ce5ab4-4598-11e3-8eaf-1ec263c107be.png)
 
@@ -78,7 +76,13 @@ Don't worry, we`re about to reinstall it, along with everything else we need.
 
 ## Okay, let's do this…
 
-Now for the fun part! Head on over to [this page](http://makersquare-student-boxen.herokuapp.com/), copy the line of text you see, and paste it into the terminal. Press enter, then wait as it asks first for your user password on OS X, and then for your GitHub username and password (maybe).
+```console
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone https://github.com/techpeace/my-boxen.git /opt/boxen/repo
+cd /opt/boxen/repo
+script/boxen
+```
 
 From there, sit back and relax as the script does its thing. When it's all over with, run this:
 
@@ -102,11 +106,7 @@ After that's finished up, run this:
 echo 'source /opt/boxen/env.sh' >> ~/.zshrc
 ```
 
-You should also [install our dotfiles](http://github.com/makersquare/dotfiles), which are the configuration files that control your development environment. Ours are tailored to the type of development we'll be doing at MakerSquare, and they'll keep your environment close to what we run in the lab.
-
-### There is no step 4
-
-You're all set! Your setup is now mostly identical to the way our lab machines work.
+You should also [install the MakerSquare dotfiles](http://github.com/makersquare/dotfiles), which are the configuration files that control your development environment. These will provide you with a good starting point.
 
 ## What was installed?
 
